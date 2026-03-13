@@ -25,7 +25,7 @@ export default function ConsultingSection() {
             <p className="consulting__desc">
               Each corporate program also includes consulting support. Your team
               receives{" "}
-              <strong>one dedicated consulting session per employee</strong>{" "}
+              <strong>one dedicated consulting session </strong>{" "}
               where we help apply the systems directly to your business.
             </p>
 
@@ -52,7 +52,7 @@ export default function ConsultingSection() {
         </Reveal>
       </div>
 
-      
+
     </section>
   );
 }

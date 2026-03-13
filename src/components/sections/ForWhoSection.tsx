@@ -74,13 +74,15 @@ export default function ForWhoSection() {
 
         <div className="for__grid">
           {audiences.map((item, i) => (
-            <Reveal key={item.title} delay={i * 70}>
-              <div className="for__card">
-                <div className="for__icon">{item.icon}</div>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-              </div>
-            </Reveal>
+            <div key={item.title} className="for__grid-item">
+              <Reveal delay={i * 70} className="for__reveal">
+                <div className="for__card">
+                  <div className="for__icon">{item.icon}</div>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </div>
+              </Reveal>
+            </div>
           ))}
         </div>
       </div>

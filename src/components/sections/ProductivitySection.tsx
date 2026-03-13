@@ -64,13 +64,15 @@ export default function ProductivitySection() {
 
         <div className="productivity__grid">
           {tools.map((tool, i) => (
-            <Reveal key={tool.title} delay={i * 80}>
-              <div className="productivity__card">
-                <div className="productivity__icon">{tool.icon}</div>
-                <h3>{tool.title}</h3>
-                <p>{tool.description}</p>
-              </div>
-            </Reveal>
+            <div key={tool.title} className="productivity__grid-item">
+              <Reveal delay={i * 80} className="productivity__reveal">
+                <div className="productivity__card">
+                  <div className="productivity__icon">{tool.icon}</div>
+                  <h3>{tool.title}</h3>
+                  <p>{tool.description}</p>
+                </div>
+              </Reveal>
+            </div>
           ))}
         </div>
       </div>

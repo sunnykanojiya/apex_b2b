@@ -57,13 +57,15 @@ export default function OutcomesSection() {
 
         <div className="outcomes__grid">
           {outcomes.map((item, i) => (
-            <Reveal key={item.title} delay={i * 80}>
-              <div className="outcomes__card">
-                <div className="outcomes__icon">{item.icon}</div>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-              </div>
-            </Reveal>
+            <div key={item.title} className="outcomes__grid-item">
+              <Reveal delay={i * 80} className="outcomes__reveal">
+                <div className="outcomes__card">
+                  <div className="outcomes__icon">{item.icon}</div>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </div>
+              </Reveal>
+            </div>
           ))}
         </div>
       </div>

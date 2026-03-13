@@ -2,40 +2,69 @@
   padding: 24px 0 60px;
 }
         .why__grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-          gap: 24px;
-        }
-        .why__card {
-          padding: 36px 28px;
-          background: rgba(0,0,0,);
-          border: 1px solid rgba(0,0,0,);
-          border-radius: 16px;
-          display: flex;
-          flex-direction: column;
-          gap: 14px;
-          transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
-          position: relative;
-          overflow: hidden;
-        }
-        .why__card::after {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          height: 2px;
-          background: linear-gradient(90deg, transparent, rgba(99,102,241,0), transparent);
-          transition: background 0.3s;
-        }
-        .why__card:hover {
-          border-color: rgba(99,102,241,0.3);
-          transform: translateY(-4px);
-          box-shadow: 0 24px 48px rgba(0,0,0,0.3);
-        }
-        .why__card:hover::after {
-          background: linear-gradient(90deg, transparent, rgba(99,102,241,0.8), transparent);
-        }
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+@media (max-width: 1024px) {
+  .why__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .why__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.why__grid-item {
+  display: flex;
+}
+
+.why__reveal {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.why__card {
+  padding: 36px 28px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.why__card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(124, 58, 237, 0), transparent);
+  transition: background 0.3s;
+}
+
+.why__card:hover {
+  border-color: rgba(124, 58, 237, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.why__card:hover::after {
+  background: linear-gradient(90deg, transparent, rgba(124, 58, 237, 0.8), transparent);
+}
         .why__num {
           font-family: var(--font-outfit), sans-serif;
           font-size: 2.5rem;

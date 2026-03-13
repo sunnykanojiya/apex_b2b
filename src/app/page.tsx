@@ -11,6 +11,7 @@ import ConsultingSection from "@/components/sections/ConsultingSection";
 import ForWhoSection from "@/components/sections/ForWhoSection";
 import WhyApexSection from "@/components/sections/WhyApexSection";
 import FinalCTASection from "@/components/sections/FinalCTASection";
+import Faculty from "@/components/sections/Faculty";
 
 export default function HomePage() {
   return (
@@ -19,14 +20,15 @@ export default function HomePage() {
       <main>
         <HeroSection />
         <OutcomesSection />
-        <ImpactSection />
-        <ProgramSection />
-        <SystemsSection />
+        <Faculty />
         <ProductivitySection />
+        <ForWhoSection />
+        {/* <ImpactSection /> */}
+        {/* <ProgramSection /> */}
+        <SystemsSection />
+        <WhyApexSection />
         <AchievesSection />
         <ConsultingSection />
-        <ForWhoSection />
-        <WhyApexSection />
         <FinalCTASection />
       </main>
       <Footer />

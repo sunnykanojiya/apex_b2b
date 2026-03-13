@@ -2,6 +2,13 @@ import "./HeroSection.css";
 import Reveal from "@/components/ui/Reveal";
 
 export default function HeroSection() {
+  const tags = [
+    "Live training sessions",
+    "Recorded learning modules",
+    "Hands - on system building",
+    "Real workflow implementation",
+    "Lifetime access to learning resources"
+  ];
   return (
     <section className="hero" id="home">
       {/* Decorative background */}
@@ -20,18 +27,14 @@ export default function HeroSection() {
 
           <Reveal delay={100}>
             <h1 className="hero__headline">
-              Build an{" "}
-              <span className="gradient-text">AI Powered</span>
-              <br />
-              Sales Engine for Your Team
+              AI Powered Sales Systems for {" "}
+              <span className="gradient-text">Modern B2B Teams</span>
             </h1>
           </Reveal>
 
           <Reveal delay={200}>
             <p className="hero__subheadline">
-              A hands-on training program that helps your sales team use AI,
-              automation, and structured outreach systems to generate more pipeline
-              and close deals faster.
+              This program trains your team to build structured outbound and inbound systems using AI tools, automation workflows, and modern sales infrastructure.
             </p>
           </Reveal>
 
@@ -74,23 +77,28 @@ export default function HeroSection() {
         <Reveal delay={500}>
           <div className="hero__stats">
             <div className="hero__stat">
-              <span className="hero__stat-num">20+</span>
-              <span className="hero__stat-label">Companies Trained</span>
+              <span className="hero__stat-num">Live training sessions</span>
+              {/* <span className="hero__stat-label">Companies Trained</span> */}
             </div>
             <div className="hero__stat-divider" />
             <div className="hero__stat">
-              <span className="hero__stat-num">100%</span>
-              <span className="hero__stat-label">Hands-On Implementation</span>
+              <span className="hero__stat-num">Recorded learning modules</span>
+              {/* <span className="hero__stat-label">Hands-On Implementation</span> */}
             </div>
             <div className="hero__stat-divider" />
             <div className="hero__stat">
-              <span className="hero__stat-num" style={{ fontSize: "1.3rem" }}>2 Consulting Sessions</span>
-              <span className="hero__stat-label">Per Employee</span>
+              <span className="hero__stat-num" >Hands-on system building</span>
+              {/* <span className="hero__stat-label">Per Employee</span> */}
             </div>
             <div className="hero__stat-divider" />
             <div className="hero__stat">
-              <span className="hero__stat-num" style={{ fontSize: "1.3rem" }}>Automation Workflows</span>
-              <span className="hero__stat-label">Built for Your Pipeline</span>
+              <span className="hero__stat-num" >Real workflow implementation</span>
+              {/* <span className="hero__stat-label">Built for Your Pipeline</span> */}
+            </div>
+            <div className="hero__stat-divider" />
+            <div className="hero__stat">
+              <span className="hero__stat-num" >Lifetime access to learning resources</span>
+              {/* <span className="hero__stat-label">Built for Your Pipeline</span> */}
             </div>
           </div>
         </Reveal>

@@ -22,7 +22,7 @@ export default function AchievesSection() {
       <div className="container">
         <div className="achieves__layout">
           <Reveal className="achieves__left">
-            <div className="section-tag">What Your Team Achieves</div>
+            <div className="section-tag">After The Program</div>
             <h2 className="achieves__heading">
               After the Program Your{" "}
               <span className="gradient-text">Team Will Have</span>
@@ -54,7 +54,7 @@ export default function AchievesSection() {
         </div>
       </div>
 
-      
+
     </section>
   );
 }

@@ -1,44 +1,74 @@
 .for-section {
   padding: 24px 0 60px;
-  background: rgba(0,0,0,);
+  background: #fff;
 }
-        .for__grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-          gap: 20px;
-        }
-        .for__card {
-          padding: 32px 28px;
-          background: rgba(0,0,0,);
-          border: 1px solid rgba(0,0,0,);
-          border-radius: 16px;
-          display: flex;
-          flex-direction: column;
-          gap: 14px;
-          transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
-          cursor: default;
-        }
-        .for__card:hover {
-          border-color: rgba(99,102,241,0.3);
-          transform: translateY(-4px);
-          box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-        }
-        .for__icon {
-          width: 52px;
-          height: 52px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background: rgba(99,102,241,0.1);
-          border: 1px solid rgba(99,102,241,0.2);
-          border-radius: 12px;
-          color: #4f46e5;
-          transition: background 0.3s, border-color 0.3s;
-        }
-        .for__card:hover .for__icon {
-          background: rgba(99,102,241,0.18);
-          border-color: rgba(99,102,241,0.4);
-        }
+
+.for__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+@media (max-width: 1024px) {
+  .for__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .for__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.for__grid-item {
+  display: flex;
+}
+
+.for__reveal {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.for__card {
+  padding: 32px 28px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: all 0.3s ease;
+  cursor: default;
+  height: 100%;
+  width: 100%;
+}
+
+.for__card:hover {
+  border-color: rgba(124, 58, 237, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.for__icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(124, 58, 237, 0.1);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  border-radius: 12px;
+  color: #7c3aed;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.for__card:hover .for__icon {
+  background: rgba(124, 58, 237, 0.18);
+  border-color: rgba(124, 58, 237, 0.4);
+}
         .for__card h3 {
           font-size: 1.05rem;
           font-weight: 700;

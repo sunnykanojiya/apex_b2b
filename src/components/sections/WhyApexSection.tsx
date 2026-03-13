@@ -19,7 +19,7 @@ const reasons = [
     num: "03",
     title: "Hands-On Implementation",
     description:
-      "Your team builds real systems during the program — every session results in a working deliverable, not just knowledge.",
+      "Your team builds real systems during the program, every session results in a working deliverable, not just knowledge.",
   },
   {
     num: "04",
@@ -36,23 +36,25 @@ export default function WhyApexSection() {
         <SectionHeader
           tag="Why Companies Work With Apex"
           title={<>We Have <span className="gradient-text">Been There</span></>}
-          subtitle="Our team has built and run actual sales systems — not consulted from the sidelines."
+          subtitle="Our team has built and run actual sales systems, not consulted from the sidelines."
         />
 
         <div className="why__grid">
           {reasons.map((item, i) => (
-            <Reveal key={item.num} delay={i * 80}>
-              <div className="why__card">
-                <div className="why__num">{item.num}</div>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-              </div>
-            </Reveal>
+            <div key={item.num} className="why__grid-item">
+              <Reveal delay={i * 80} className="why__reveal">
+                <div className="why__card">
+                  <div className="why__num">{item.num}</div>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </div>
+              </Reveal>
+            </div>
           ))}
         </div>
       </div>
 
-      
+
     </section>
   );
 }
