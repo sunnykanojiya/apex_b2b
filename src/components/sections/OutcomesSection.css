@@ -10,13 +10,13 @@
   align-items: stretch;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   .outcomes__grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 580px) {
   .outcomes__grid {
     grid-template-columns: 1fr;
   }
@@ -33,49 +33,59 @@
 }
 
 .outcomes__card {
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  border-radius: 16px;
-  padding: 32px 28px;
+  background: linear-gradient(135deg, #ffffff 0%, #fafbfc 100%);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 18px;
+  padding: 36px 30px;
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
   height: 100%;
   width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.outcomes__card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.04), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 .outcomes__card:hover {
   border-color: rgba(124, 58, 237, 0.2);
   transform: translateY(-4px);
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 16px 40px rgba(124, 58, 237, 0.1);
 }
 
-.outcomes__icon {
-  width: 52px;
-  height: 52px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(124, 58, 237, 0.1);
-  border: 1px solid rgba(124, 58, 237, 0.2);
-  border-radius: 12px;
+.outcomes__card:hover::before {
+  opacity: 1;
+}
+
+.outcomes__stat {
+  font-size: 2.2rem;
+  font-weight: 800;
   color: #7c3aed;
-  margin-bottom: 20px;
-  transition: background 0.3s, border-color 0.3s;
+  line-height: 1;
+  margin-bottom: 14px;
+  letter-spacing: -0.01em;
 }
 
-.outcomes__card:hover .outcomes__icon {
-  background: rgba(124, 58, 237, 0.18);
-  border-color: rgba(124, 58, 237, 0.4);
+.outcomes__card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #0f172a;
+  line-height: 1.35;
 }
-        .outcomes__card h3 {
-          font-size: 1.1rem;
-          font-weight: 700;
-          margin-bottom: 10px;
-          color: #0f172a;
-        }
-        .outcomes__card p {
-          font-size: 0.9rem;
-          color: #334155;
-          line-height: 1.7;
-        }
+
+.outcomes__card p {
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.6;
+  flex: 1;
+}

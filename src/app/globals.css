@@ -55,6 +55,19 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* ========== SCROLL ANCHOR OFFSET ========== */
+section[id],
+[id] {
+  scroll-margin-top: 100px;
+}
+
+@media (max-width: 768px) {
+  section[id],
+  [id] {
+    scroll-margin-top: 75px;
+  }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -116,6 +129,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-header p {
+  font-size: 1.1rem;
+  color: var(--muted-lighter);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.section-subtitle {
   font-size: 1.1rem;
   color: var(--muted-lighter);
   max-width: 600px;

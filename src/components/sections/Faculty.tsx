@@ -86,7 +86,7 @@ export default function Faculty() {
       <div className="container">
         <Reveal>
           <h2 className="faculty-section__heading">
-            Our Faculties from <span className="highlight">IIT, ISB, ICAI</span>
+            Our Trainers from <span className="highlight">IIT, ISB, ICAI</span>
           </h2>
         </Reveal>
         <div className="faculty__grid">

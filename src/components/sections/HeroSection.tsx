@@ -58,9 +58,6 @@ export default function HeroSection() {
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </a>
-              <a href="#program" className="btn btn-secondary">
-                Book a Consultation
-              </a>
             </div>
           </Reveal>
 

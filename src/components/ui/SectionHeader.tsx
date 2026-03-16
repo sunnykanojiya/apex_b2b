@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { type ReactNode, useEffect, useRef } from "react";
 
 interface SectionHeaderProps {
   tag: string;
-  title: React.ReactNode;
-  subtitle?: string;
+  title: ReactNode;
+  subtitle?: ReactNode;
   centered?: boolean;
 }
 
@@ -40,7 +40,7 @@ export default function SectionHeader({
     >
       <div className="section-tag">{tag}</div>
       <h2>{title}</h2>
-      {subtitle && <p>{subtitle}</p>}
+      {subtitle && <div className="section-subtitle">{subtitle}</div>}
     </div>
   );
 }

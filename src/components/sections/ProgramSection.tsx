@@ -21,7 +21,7 @@ export default function ProgramSection() {
       <div className="container">
         <div className="program__layout">
           <Reveal className="program__left">
-            <div className="section-tag">Program Overview</div>
+            <div className="section-tag">Sales Systems Your Team Builds</div>
             <h2 className="program__heading">
               AI Powered Sales Systems for{" "}
               <span className="gradient-text">Modern B2B Teams</span>
