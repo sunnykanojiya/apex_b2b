@@ -28,7 +28,7 @@ export default function HomePage() {
         <SystemsSection />
         <WhyApexSection />
         <AchievesSection />
-        <ConsultingSection />
+        {/* <ConsultingSection /> */}
         <FinalCTASection />
       </main>
       <Footer />
