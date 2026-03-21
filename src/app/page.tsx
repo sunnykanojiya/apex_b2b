@@ -12,6 +12,8 @@ import ForWhoSection from "@/components/sections/ForWhoSection";
 import WhyApexSection from "@/components/sections/WhyApexSection";
 import FinalCTASection from "@/components/sections/FinalCTASection";
 import Faculty from "@/components/sections/Faculty";
+import FAQSection from "@/components/sections/FAQSection";
+import TrustedBySection from "@/components/sections/TrustedBySection";
 
 export default function HomePage() {
   return (
@@ -19,6 +21,7 @@ export default function HomePage() {
       <Navbar />
       <main>
         <HeroSection />
+        <TrustedBySection />
         <OutcomesSection />
         <Faculty />
         <ProductivitySection />
@@ -29,6 +32,7 @@ export default function HomePage() {
         <WhyApexSection />
         <AchievesSection />
         {/* <ConsultingSection /> */}
+        <FAQSection />
         <FinalCTASection />
       </main>
       <Footer />

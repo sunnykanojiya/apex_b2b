@@ -1,7 +1,7 @@
 .systems-section {
   padding: 24px 0 60px;
   background:
-    radial-gradient(circle at 10% -5%, rgba(14, 165, 233, 0.08), transparent 35%),
+    radial-gradient(circle at 10% -5%, rgba(124, 58, 237, 0.08), transparent 35%),
     radial-gradient(circle at 85% 0%, rgba(15, 23, 42, 0.07), transparent 42%),
     #fff;
 }
@@ -35,10 +35,10 @@
   font-weight: 700;
   color: #0f172a;
   background: #ffffff;
-  border: 1px solid rgba(14, 165, 233, 0.25);
+  border: 1px solid rgba(124, 58, 237, 0.25);
   padding: 8px 14px;
   border-radius: 999px;
-  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.08);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.08);
   transition: all 0.2s ease;
 }
 
@@ -47,14 +47,14 @@
   width: 5px;
   height: 5px;
   border-radius: 999px;
-  background: #0369a1;
+  background: #7c3aed;
   opacity: 0.8;
 }
 
 .systems-header__chip:hover {
   transform: translateY(-2px);
-  border-color: rgba(14, 165, 233, 0.4);
-  box-shadow: 0 8px 18px rgba(14, 165, 233, 0.12);
+  border-color: rgba(124, 58, 237, 0.4);
+  box-shadow: 0 8px 18px rgba(124, 58, 237, 0.12);
 }
 
 @media (max-width: 640px) {
@@ -78,9 +78,9 @@
 }
 
 .block-card--open {
-  border-color: rgba(3, 105, 161, 0.4);
+  border-color: rgba(109, 40, 217, 0.4);
   transform: translateY(-1px);
-  box-shadow: 0 14px 30px rgba(3, 105, 161, 0.13), 0 8px 18px rgba(15, 23, 42, 0.07);
+  box-shadow: 0 14px 30px rgba(109, 40, 217, 0.13), 0 8px 18px rgba(15, 23, 42, 0.07);
 }
 
 .block-card__header {
@@ -97,7 +97,7 @@
 }
 
 .block-card__header:hover {
-  background: rgba(14, 165, 233, 0.06);
+  background: rgba(124, 58, 237, 0.06);
 }
 
 .block-card__number {
@@ -105,7 +105,7 @@
   font-family: var(--font-outfit), sans-serif;
   font-size: 0.82rem;
   font-weight: 800;
-  color: #075985;
+  color: #5b21b6;
   opacity: 1;
   letter-spacing: 0.05em;
   width: 36px;
@@ -115,8 +115,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: rgba(14, 165, 233, 0.14);
-  border: 1px solid rgba(3, 105, 161, 0.2);
+  background: rgba(124, 58, 237, 0.14);
+  border: 1px solid rgba(109, 40, 217, 0.2);
 }
 
 .block-card__title {
@@ -135,7 +135,7 @@
 
 .block-card--open .block-card__chevron {
   transform: rotate(180deg);
-  color: #0369a1;
+  color: #7c3aed;
 }
 
 .block-card__body {
@@ -168,7 +168,7 @@
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #0369a1;
+  color: #6d28d9;
   margin-bottom: 14px;
 }
 
@@ -195,9 +195,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(14, 165, 233, 0.14);
+  background: rgba(124, 58, 237, 0.14);
   border-radius: 5px;
-  color: #0369a1;
+  color: #7c3aed;
 }
 
 @media (max-width: 768px) {

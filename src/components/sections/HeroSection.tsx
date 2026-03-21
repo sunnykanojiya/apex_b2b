@@ -21,7 +21,7 @@ export default function HeroSection() {
           <Reveal delay={0}>
             <div className="hero__badge">
               <span className="hero__badge-dot" />
-              Corporate Sales Training Program
+              The Program Modern Revenue Teams Are Built On
             </div>
           </Reveal>
 
@@ -58,6 +58,9 @@ export default function HeroSection() {
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </a>
+              <a href="https://apexschoolofbusiness.com/" className="btn btn-secondary">
+                <span>Book a Call</span>
+              </a>
             </div>
           </Reveal>
 
@@ -68,7 +71,7 @@ export default function HeroSection() {
             <iframe width="560" height="315" src="https://www.youtube.com/embed/wfnEeIQCQCw?si=72zA9gMQ-Codd1yC" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
           </Reveal>
         </div>
-      </div>
+      </div >
 
       <div className="container hero__stats-container">
         <Reveal delay={500}>
@@ -100,6 +103,6 @@ export default function HeroSection() {
           </div>
         </Reveal>
       </div>
-    </section>
+    </section >
   );
 }
