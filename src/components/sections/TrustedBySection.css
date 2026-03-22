@@ -3,6 +3,10 @@
   overflow: hidden;
 }
 
+.trusted-section .section-header {
+  margin-bottom: 28px;
+}
+
 .trusted__heading {
   text-align: center;
   font-size: 1.6rem;

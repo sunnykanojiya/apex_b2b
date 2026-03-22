@@ -1,5 +1,8 @@
+"use client";
+
 import "./Footer.css";
 import Link from "next/link";
+import { useLeadForm } from "@/context/LeadFormContext";
 
 const footerLinks = [
   { label: "Key Outcomes", href: "/#outcomes" },
@@ -10,6 +13,7 @@ const footerLinks = [
 ];
 
 export default function Footer() {
+  const { openLeadForm } = useLeadForm();
   return (
     <footer className="footer">
       <div className="container">
@@ -56,9 +60,9 @@ export default function Footer() {
             <p className="footer__cta-text">
               Ready to launch your career in the AI driven business world?
             </p>
-            <Link href="https://courses.apexschoolofbusiness.com/t/p/checkout/V4/course/69b4e7024a302be139825d6c/p1?callback_url=/courses/69b4e7024a302be139825d6c" className="footer__cta-btn">
-              Enroll Now <span className="arrow">↗</span>
-            </Link>
+            <button onClick={openLeadForm} className="footer__cta-btn">
+              Access Free Preview <span className="arrow">↗</span>
+            </button>
           </div>
 
           {/* Contact Column */}

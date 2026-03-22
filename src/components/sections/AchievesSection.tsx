@@ -1,5 +1,8 @@
+"use client";
+
 import "./AchievesSection.css";
 import Reveal from "@/components/ui/Reveal";
+import { useLeadForm } from "@/context/LeadFormContext";
 
 const achievements = [
     "AI powered prospecting and lead generation system",
@@ -16,6 +19,7 @@ const CheckIcon = () => (
 );
 
 export default function AchievesSection() {
+    const { openLeadForm } = useLeadForm();
     return (
         <section className="achieves-section" id="achieves">
             <div className="achieves__bg" aria-hidden="true" />
@@ -31,11 +35,11 @@ export default function AchievesSection() {
                             Your team does not just learn about sales systems.{" "}
                             <strong>They build one for your company.</strong>
                         </p>
-                        <a
-                            href="https://courses.apexschoolofbusiness.com/t/p/checkout/V4/course/69b4e7024a302be139825d6c/p1?callback_url=/courses/69b4e7024a302be139825d6c"
+                        <button
+                            onClick={openLeadForm}
                             className="btn btn-primary achieves__cta"
                         >
-                            <span>Join the Corporate Program</span>
+                            <span>Get Exclusive Preview</span>
                             <svg
                                 width="18"
                                 height="18"
@@ -47,7 +51,7 @@ export default function AchievesSection() {
                             >
                                 <path d="M5 12h14M12 5l7 7-7 7" />
                             </svg>
-                        </a>
+                        </button>
                     </Reveal>
 
                     <Reveal className="achieves__right" delay={150}>

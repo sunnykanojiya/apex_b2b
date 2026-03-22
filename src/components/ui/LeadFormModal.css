@@ -1,0 +1,201 @@
+/* ── Lead Form Modal ── */
+
+.lead-modal__overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  padding: 24px;
+}
+
+.lead-modal__overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ── Modal Card ── */
+.lead-modal {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.18),
+    0 0 0 1px rgba(0, 0, 0, 0.04);
+  padding: 40px 36px 36px;
+  transform: translateY(24px) scale(0.97);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lead-modal__overlay.open .lead-modal {
+  transform: translateY(0) scale(1);
+}
+
+/* ── Close Button ── */
+.lead-modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #64748b;
+  transition: background 0.2s, color 0.2s;
+}
+
+.lead-modal__close:hover {
+  background: rgba(0, 0, 0, 0.08);
+  color: #0f172a;
+}
+
+/* ── Header ── */
+.lead-modal__title {
+  font-family: var(--font-outfit), "Outfit", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+
+.lead-modal__subtitle {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+/* ── Form ── */
+.lead-modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.lead-modal__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.lead-modal__label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #1e293b;
+  letter-spacing: 0.01em;
+}
+
+.lead-modal__input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 0.92rem;
+  color: #0f172a;
+  background: #f8fafc;
+  border: 1.5px solid rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+  font-family: inherit;
+}
+
+.lead-modal__input::placeholder {
+  color: #94a3b8;
+}
+
+.lead-modal__input:focus {
+  border-color: var(--accent, #9333ea);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(147, 51, 234, 0.1);
+}
+
+/* ── Disclaimer ── */
+.lead-modal__disclaimer {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  line-height: 1.55;
+  margin-top: 4px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* ── Submit Button ── */
+.lead-modal__submit {
+  width: 100%;
+  padding: 14px 24px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, var(--brand-from, #9333ea), var(--brand-mid, #a855f7));
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 0 24px rgba(147, 51, 234, 0.2), 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin-top: 6px;
+  letter-spacing: -0.01em;
+}
+
+.lead-modal__submit:hover {
+  background: linear-gradient(135deg, var(--accent-hover, #7e22ce), var(--brand-from, #9333ea));
+  box-shadow: 0 0 36px rgba(147, 51, 234, 0.35), 0 6px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+}
+
+.lead-modal__submit:active {
+  transform: translateY(0);
+}
+
+/* ── Scrollbar inside modal ── */
+.lead-modal::-webkit-scrollbar {
+  width: 4px;
+}
+
+.lead-modal::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .lead-modal__overlay {
+    padding: 16px;
+    align-items: flex-end;
+  }
+
+  .lead-modal {
+    max-width: 100%;
+    padding: 32px 24px 28px;
+    border-radius: 20px 20px 0 0;
+    max-height: 85vh;
+  }
+
+  .lead-modal__title {
+    font-size: 1.35rem;
+  }
+
+  .lead-modal__form {
+    gap: 14px;
+  }
+
+  .lead-modal__input {
+    padding: 11px 14px;
+  }
+}

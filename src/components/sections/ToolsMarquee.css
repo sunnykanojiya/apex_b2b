@@ -1,0 +1,121 @@
+/* ── Tools Marquee Section ── */
+.tools-marquee-section {
+  padding-bottom: 42px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.tools-marquee__heading {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 36px;
+  line-height: 1.15;
+}
+
+/* ── Marquee Wrapper ── */
+.tools-marquee__wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.tools-marquee__wrapper::before,
+.tools-marquee__wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.tools-marquee__wrapper::before {
+  left: 0;
+  background: linear-gradient(90deg, #fff 0%, transparent 100%);
+}
+
+.tools-marquee__wrapper::after {
+  right: 0;
+  background: linear-gradient(270deg, #fff 0%, transparent 100%);
+}
+
+/* ── Track ── */
+.tools-marquee__track {
+  display: flex;
+  gap: 32px;
+  animation: toolsMarqueeScroll 30s linear infinite;
+  width: max-content;
+}
+
+@keyframes toolsMarqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ── Card ── */
+.tools-marquee__card {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 28px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  min-width: 180px;
+}
+
+.tools-marquee__icon {
+  height: 36px;
+  width: 36px;
+  object-fit: contain;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.tools-marquee__name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+  white-space: nowrap;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .tools-marquee-section {
+    padding-bottom: 36px;
+  }
+
+  .tools-marquee__heading {
+    font-size: 1.25rem;
+    margin-bottom: 24px;
+  }
+
+  .tools-marquee__track {
+    gap: 20px;
+  }
+
+  .tools-marquee__card {
+    padding: 10px 20px;
+    min-width: 150px;
+    gap: 10px;
+  }
+
+  .tools-marquee__icon {
+    height: 28px;
+    width: 28px;
+  }
+
+  .tools-marquee__name {
+    font-size: 0.9rem;
+  }
+}

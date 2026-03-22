@@ -1,10 +1,14 @@
+"use client";
+
 import "./HeroSection.css";
 import Reveal from "@/components/ui/Reveal";
+import { useLeadForm } from "@/context/LeadFormContext";
 
 export default function HeroSection() {
+  const { openLeadForm } = useLeadForm();
   const tags = [
-    "Live training sessions",
     "Recorded learning modules",
+    "Live training sessions",
     "Hands - on system building",
     "Real workflow implementation",
     "Lifetime access to learning resources"
@@ -52,12 +56,12 @@ export default function HeroSection() {
 
           <Reveal delay={400}>
             <div className="hero__ctas">
-              <a href="https://courses.apexschoolofbusiness.com/t/p/checkout/V4/course/69b4e7024a302be139825d6c/p1?callback_url=/courses/69b4e7024a302be139825d6c" className="btn btn-primary">
-                <span>Train Your Sales Team</span>
+              <button onClick={openLeadForm} className="btn btn-primary">
+                <span>Preview the Program</span>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
-              </a>
+              </button>
               <a href="https://apexschoolofbusiness.com/" className="btn btn-secondary">
                 <span>Book a Call</span>
               </a>
@@ -77,13 +81,13 @@ export default function HeroSection() {
         <Reveal delay={500}>
           <div className="hero__stats">
             <div className="hero__stat">
-              <span className="hero__stat-num">Live training sessions</span>
-              {/* <span className="hero__stat-label">Companies Trained</span> */}
+              <span className="hero__stat-num">Recorded learning modules</span>
+              {/* <span className="hero__stat-label">Hands-On Implementation</span> */}
             </div>
             <div className="hero__stat-divider" />
             <div className="hero__stat">
-              <span className="hero__stat-num">Recorded learning modules</span>
-              {/* <span className="hero__stat-label">Hands-On Implementation</span> */}
+              <span className="hero__stat-num">Live training sessions</span>
+              {/* <span className="hero__stat-label">Companies Trained</span> */}
             </div>
             <div className="hero__stat-divider" />
             <div className="hero__stat">
