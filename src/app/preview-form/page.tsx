@@ -7,7 +7,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
 const CHECKOUT_URL =
-  "https://courses.apexschoolofbusiness.com/t/p/checkout/V4/course/69b4e7024a302be139825d6c/p1?callback_url=/courses/69b4e7024a302be139825d6c";
+  "https://courses.apexschoolofbusiness.com/s/preview/courses/AI-Powered-Sales-System-Training-for-B2B-69bf9eb18d8b3db3693ecb84#69b4ee21dec50bb1d4f08d2b";
 
 interface FormData {
   fullName: string;
