@@ -79,12 +79,12 @@ export default function HeroSection() {
         <Reveal delay={500}>
           <div className="hero__stats">
             <div className="hero__stat">
-              <span className="hero__stat-num"> <span className="highlight_num">12+</span> hours learning modules</span>
+              <span className="hero__stat-num"> <span className="highlight_num">12</span> hours self-paced learning</span>
               {/* <span className="hero__stat-label">Hands-On Implementation</span> */}
             </div>
             <div className="hero__stat-divider" />
             <div className="hero__stat">
-              <span className="hero__stat-num"><span className="highlight_num">5+</span> hours live training sessions</span>
+              <span className="hero__stat-num"><span className="highlight_num">2–3 </span> hours live training sessions</span>
               {/* <span className="hero__stat-label">Companies Trained</span> */}
             </div>
             <div className="hero__stat-divider" />
