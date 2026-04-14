@@ -5,7 +5,7 @@ import Reveal from "@/components/ui/Reveal";
 
 export default function HeroSection() {
   const tags = [
-    "Recorded learning modules",
+    "12 Hrs learning modules",
     "Live training sessions",
     "Hands - on system building",
     "Real workflow implementation",
@@ -79,12 +79,12 @@ export default function HeroSection() {
         <Reveal delay={500}>
           <div className="hero__stats">
             <div className="hero__stat">
-              <span className="hero__stat-num">Recorded learning modules</span>
+              <span className="hero__stat-num">12 hours learning modules</span>
               {/* <span className="hero__stat-label">Hands-On Implementation</span> */}
             </div>
             <div className="hero__stat-divider" />
             <div className="hero__stat">
-              <span className="hero__stat-num">Live training sessions</span>
+              <span className="hero__stat-num">5 hours live training sessions</span>
               {/* <span className="hero__stat-label">Companies Trained</span> */}
             </div>
             <div className="hero__stat-divider" />
