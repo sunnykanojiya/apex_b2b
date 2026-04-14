@@ -233,6 +233,15 @@
   animation: scroll-line 1.8s ease-in-out infinite;
 }
 
+.highlight_num{
+  background: #000;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 24px;
+  margin-right: 2px;
+}
+
 @keyframes scroll-line {
   0% {
     transform: scaleY(0);
